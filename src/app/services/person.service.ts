@@ -26,4 +26,11 @@ export class PersonService {
   public getList(): Observable<any> {
     return this.http.get<any>(this.endpoint, this.httpOptions);
   }
+  
+  public getSearch(searchItem: String): Observable<any> {
+    return this.http.get<any>(
+      this.endpoint + "/search/" + searchItem,
+      this.httpOptions
+    );
+  }
 }

@@ -6,12 +6,12 @@
         <!-- <i class="fas fa-plus-circle"></i> Add a Person</a> -->
         <br>
 
-        <form class="form" (submit)="onDetailsPageSubmit()">
+        <form class="form" (submit)="onSearchSubmit()">
           <div class="form-group">
               <label for="SearchTextField">Enter a name</label>
               <input type="text" class="form-control"
               id="SearchTextField"
-              placeholder="Enter Name"
+              placeholder="Enter a Name to search"
               name="searchItem"
               [(ngModel)]="searchItem"
               value="{{ searchItem}}"
@@ -19,9 +19,7 @@
           </div>
 
           <button type="submit" class="btn btn-primary">
-          <i class="fas fa-edit"></i> {{ title }}</button>
-          <a routerLink="/contact/contact-list" class="btn btn-warning">
-              <i class="fas fa-undo"></i> Cancel</a>
+          <i class="fas fa-edit"></i> Search</button>
       </form>
 
         <table class="table table-bordered table-striped table-hover">
