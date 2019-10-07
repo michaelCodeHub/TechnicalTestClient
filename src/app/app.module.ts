@@ -14,13 +14,15 @@ import {
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from "./footer/footer.component";
 import { PersonListComponent } from './person-list/person-list.component';
+import { PersonSearchComponent } from './person-search/person-search.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
     FooterComponent,
-    PersonListComponent
+    PersonListComponent,
+    PersonSearchComponent
   ],
   imports: [
     BrowserModule,
