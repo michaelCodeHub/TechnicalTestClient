@@ -10,7 +10,7 @@ import { Person } from '../models/person';
 })
 export class PersonService {
 
-  private endpoint = 'https://technicaltestrestapi.herokuapp.com//api/v1/users';
+  private endpoint = 'https://technicalterstrestapi.herokuapp.com/api/v1/users';
 
   private httpOptions = {
     headers: new HttpHeaders({
