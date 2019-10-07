@@ -15,6 +15,7 @@ import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from "./footer/footer.component";
 import { PersonListComponent } from './person-list/person-list.component';
 import { PersonSearchComponent } from './person-search/person-search.component';
+import { HomeComponent } from './home/home.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { PersonSearchComponent } from './person-search/person-search.component';
     HeaderComponent,
     FooterComponent,
     PersonListComponent,
-    PersonSearchComponent
+    PersonSearchComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
