@@ -16,22 +16,31 @@ export class PersonSearchComponent implements OnInit {
 
 
   constructor(
-    private activatedRoute: ActivatedRoute,
     private flashMessage: FlashMessagesService,
     private personService: PersonService,
-    private router: Router
   ) { }
 
   ngOnInit() {
   }
 
-  onSearchSubmit(): void{
-    console.debug(this.searchItem);
-    
-    this.personService.getSearch(this.searchItem).subscribe(data => {
-      console.debug(data);
-      this.persons = data;
-    });
+  onSearchSubmit(): void {
+
+    if (this.searchItem != null) {
+
+      this.personService.getSearch(this.searchItem).subscribe(data => {
+        this.persons = data;
+        this.flashMessage.show(this.persons.length + " persons found.", {
+          cssClass: "alert-info",
+          timeOut: 3000
+        });
+      });
+
+    } else {
+      this.flashMessage.show("Please enter a name", {
+        cssClass: "alert-danger",
+        timeOut: 3000
+      });
+    }
   }
 
 }
